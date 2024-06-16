@@ -9,6 +9,7 @@ return {
 		'nvim-tree/nvim-web-devicons'
 	},
 
+
   keys = {
     { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle Pin" },
     { "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete Non-Pinned Buffers" },
@@ -23,9 +24,44 @@ return {
     { "]B", "<cmd>BufferLineMoveNext<cr>", desc = "Move buffer next" },
   },
 
-  config = function ()
+  -- bufferline docs:
+  -- https://github.com/akinsho/bufferline.nvim/blob/main/doc/bufferline.txt
+  config = function()
 	  require("bufferline").setup({
-		  ---
+		  options = {
+			indicator = {
+				-- icon = '▎', -- this should be omitted if indicator style is not 'icon'
+				-- style = 'icon' | 'underline' | 'none',
+				style = 'underline',
+			},
+
+            -- separator_style = "slant" | "slope" | "thick" | "thin" | { 'any', 'any' },
+            separator_style = "thick",  
+
+			-- move tabs aside to accommadate neo-tree
+			offsets = {
+				{
+				  filetype = "neo-tree",
+				  text = "Neo-tree",
+				  -- text = function()
+				  --  return vim.fn.getcwd()
+				  -- end, 
+				  highlight = "Directory",
+				  text_align = "left",
+				},
+			},
+
+			-- hover event
+			-- need to set "vim.opt.mousemoveevent = true" in options.lua
+			hover = {
+				enabled = true,
+				delay = 100,
+				reveal = { 'close' }
+			},
+
+			-- show diagnostic info
+			diagnostic = "nvim_lsp",
+		  }
 	  })
   end,
 }
