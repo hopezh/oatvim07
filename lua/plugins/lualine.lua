@@ -4,7 +4,11 @@ return {
 
 	config = function()
 		require("lualine").setup({
-			---
+			options = { 
+				-- disable seperators
+				section_separators = '', 
+				component_separators = '' 
+			}
 		})
 	end,
 
