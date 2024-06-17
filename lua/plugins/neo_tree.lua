@@ -26,10 +26,24 @@ return {
             "<cmd>Neotree filesystem reveal right<cr>",
             desc = "open neotree on right",
         },
+        -- {
+        --     "<leader>tb",
+        --     "<cmd>Neotree buffers reveal float<cr>",
+        --     desc = "open buffers",
+        -- },
         {
             "<leader>tb",
-            "<cmd>Neotree buffers reveal float<cr>",
-            desc = "open buffers",
+            function()
+                require("neo-tree.command").execute({ source = "buffers", toggle = true })
+            end,
+            desc = "Buffer Explorer",
+        },
+        {
+            "<leader>tg",
+            function()
+                require("neo-tree.command").execute({ source = "git_status", toggle = true })
+            end,
+            desc = "Git Explorer",
         },
     },
 
