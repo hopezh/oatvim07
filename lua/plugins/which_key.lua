@@ -43,6 +43,8 @@ return {
                 name = "mini/markdown",
             },
 
+            ["<leader>ms"] = { name = "mini.surround"},
+
             -- keymap group for otter
             ["<leader>o"] = {
                 name = "otter",
