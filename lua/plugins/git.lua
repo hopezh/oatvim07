@@ -28,14 +28,19 @@ return {
 
 	  opts = {
 		signs = {
-		  -- add = { text = "▎" },
+		  -- add = { text = "┃" },
+		  -- change = { text = "▎" },
+		  -- delete = { text = "_" },
+		  -- topdelete = { text = "‾" },
+		  -- changedelete = { text = "~" },
+		  -- untracked = { text = "┆" },
+
 		  add = { text = "+" },
-		  change = { text = "▎" },
-		  -- delete = { text = "" },
-		  delete = { text = "x" },
-		  topdelete = { text = "" },
-		  changedelete = { text = "▎" },
-		  untracked = { text = "▎" },
+		  change = { text = "|" },
+		  delete = { text = "-" },
+		  topdelete = { text = "" },
+		  changedelete = { text = "" },
+		  untracked = { text = "┆" },
 		},
 
 		on_attach = function(buffer)
