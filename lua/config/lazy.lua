@@ -14,6 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    -- install plugins from .config/nvim/lua/plugins 
     { import = "plugins" },
 }, {
     checker = {
