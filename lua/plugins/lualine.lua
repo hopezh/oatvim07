@@ -7,9 +7,10 @@ return {
 			options = { 
 				-- disable seperators
 				section_separators = '', 
-				component_separators = '' 
+				component_separators = '',
+
+                theme = 'dracula',
 			}
 		})
 	end,
-
 }
