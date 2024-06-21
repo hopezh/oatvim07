@@ -3,6 +3,7 @@ local opt = vim.opt
 opt.autoindent = true
 opt.background = "dark"
 opt.colorcolumn = "80" -- highlight the 80th column, nil when virt-column.nvim is used
+opt.expandtab = true
 -- opt.fileformat = "unix" -- specify file format to remove the "^M" char at line end
 
 opt.guicursor =
