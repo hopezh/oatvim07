@@ -55,16 +55,19 @@ return {
 		'neovim/nvim-lspconfig',
 
 		config = function()
+            -- set keymaps 
+            vim.keymap.set({'n', 'v'}, '<leader>ca',  vim.lsp.buf.code_action, {}) -- hover to show info
+            vim.keymap.set('n', 'K',  vim.lsp.buf.hover,      {}) -- hover to show info
+            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {}) -- go to definition
+            vim.keymap.set('n', 'gr', vim.lsp.buf.references, {}) -- go to references
+
             -- import lspconfig
 		    local lspconfig = require('lspconfig')
 
             lspconfig.lua_ls.setup({})
             lspconfig.pyright.setup({})
-
-            -- set keymaps 
-            vim.keymap.set('n', 'K',  vim.lsp.buf.hover, {}) -- hover to show info
-            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {}) -- go to definition
-            vim.keymap.set('n', 'gr', vim.lsp.buf.references, {}) -- go to references
+            lspconfig.tsserver.setup({})
+            lspconfig.vimls.setup({})
 		end,
 	},
 
