@@ -40,6 +40,7 @@ return {
     },
 
     { --------------------------------------------------------------------------
+        -- show code action etc in a selection ui
         'nvim-telescope/telescope-ui-select.nvim',
 
         config = function()

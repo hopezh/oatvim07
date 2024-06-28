@@ -56,10 +56,10 @@ return {
 
 		config = function()
             -- set keymaps 
-            vim.keymap.set({'n', 'v'}, '<leader>ca',  vim.lsp.buf.code_action, {}) -- hover to show info
-            vim.keymap.set('n', 'K',  vim.lsp.buf.hover,      {}) -- hover to show info
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {}) -- go to definition
             vim.keymap.set('n', 'gr', vim.lsp.buf.references, {}) -- go to references
+            vim.keymap.set('n', 'K',  vim.lsp.buf.hover,      {}) -- hover to show info
+            vim.keymap.set({'n', 'v'}, '<leader>ca',  vim.lsp.buf.code_action, {}) -- hover to show info
 
             -- import lspconfig
 		    local lspconfig = require('lspconfig')
