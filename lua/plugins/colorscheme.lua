@@ -33,7 +33,7 @@ return {
 
         config = function()
             require("neofusion").setup({
-                transparent_mode = true,
+                transparent_mode = false,
             })
         end,
     },
