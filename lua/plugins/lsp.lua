@@ -2,6 +2,14 @@ return {
     { -- a UI to install lsp servers locally -----------------------------------
         'williamboman/mason.nvim',
 
+        keys = {
+            {
+                "<leader>cm",
+                "<cmd>Mason<cr>",
+                desc = "Mason",
+            },
+        },
+
         config = function()
             -- import mason
             local mason = require('mason')
@@ -34,6 +42,7 @@ return {
                 -- list of "lspconfig" server names for mason to install
                 -- check: https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
                 -- for the link btw "lspconfig server name" and "mason.nvim package name"
+
                 ensure_installed = {
                     "cssls",
                     "eslint",
@@ -53,6 +62,17 @@ return {
 
 	{ -- link locally installed lsp and neovim ---------------------------------
 		'neovim/nvim-lspconfig',
+
+        dependencies = {
+            { 'williamboman/mason.nvim', },
+            {
+                'williamboman/mason-lspconfig.nvim',
+
+                config = function() 
+                    ---
+                end,
+            },
+        },
 
 		config = function()
             -- set keymaps 
