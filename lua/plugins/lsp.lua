@@ -63,12 +63,13 @@ return {
 	{ -- link locally installed lsp and neovim ---------------------------------
 		'neovim/nvim-lspconfig',
 
+        -- add dependencies to avoid error on spawning lsp server
         dependencies = {
             { 'williamboman/mason.nvim', },
             {
                 'williamboman/mason-lspconfig.nvim',
 
-                config = function() 
+                config = function()
                     ---
                 end,
             },
