@@ -4,17 +4,13 @@ return {
 
     main = "ibl", -- since v3
 
-    -- -- [since v3] baisc config
-    -- config = function()
-    --     require("ibl").setup()
-    -- end,
-
     -- [since v3] use bg color for indentation area
     config = function()
         local highlight = {
             "CursorColumn",
             "Whitespace",
         }
+
         require("ibl").setup({
             indent = {
                 highlight = highlight,
