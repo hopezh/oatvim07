@@ -42,6 +42,7 @@
   "otter.nvim": { "branch": "main", "commit": "837f258040d0174ff8495584088046f98499b1ac" },
   "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
   "quarto-nvim": { "branch": "main", "commit": "eed598983fa4040eed77191f69462c1348770b8a" },
+  "render-markdown": { "branch": "main", "commit": "70ae5e9e517c930f74c3ad9e4ef325314967f2a0" },
   "telescope-ui-select.nvim": { "branch": "master", "commit": "6e51d7da30bd139a6950adf2a47fda6df9fa06d2" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "tokyonight.nvim": { "branch": "main", "commit": "b0e7c7382a7e8f6456f2a95655983993ffda745e" },
