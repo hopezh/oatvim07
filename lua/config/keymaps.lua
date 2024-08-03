@@ -12,6 +12,8 @@ vim.keymap.set("x", "jk", "<ESC>") -- visual mode
 -- in normal mode, use <leader>+n to clear highlight ---------------------------
 vim.keymap.set("n", "<leader>h", ":noh<CR>")
 
+-- yank to end of line ---------------------------------------------------------
+vim.keymap.set('n', 'Y', 'y$', { desc = "yank to the end of line"})
 
 -- temp ========================================================================
 
