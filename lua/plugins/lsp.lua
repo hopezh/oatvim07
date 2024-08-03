@@ -84,7 +84,7 @@ return {
                 -- nice loading notifications
                 -- PERF: but can slow down startup
                 'j-hui/fidget.nvim',
-                enabled = false,
+                enabled = true,
                 opts = {},
             },
         },
