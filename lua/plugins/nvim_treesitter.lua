@@ -1,15 +1,24 @@
 return {
     "nvim-treesitter/nvim-treesitter",
 
-    build = ":TSUpdate",
+    dev = false,
+
+    dependencies = {
+        'nvim-treesitter/nvim-treesitter-textobjects',
+    },
+
+    run = ":TSUpdate",
 
     config = function()
         require('nvim-treesitter.configs').setup({
+            auto_install = true,
+
             ensure_installed = {
                 "bash",
                 "c",
                 "cpp",
                 "css",
+                "dot",
                 "git_config",
                 "gitcommit",
                 "gitignore",
@@ -20,12 +29,14 @@ return {
                 "java",
                 "javascript",
                 "julia",
-                "latex",
+                "latex", -- requires tree-sitter-cli (installed automatically via Mason)
                 "lua",
                 "luadoc",
                 "luap",
                 "markdown",
                 "markdown_inline",
+                "mermaid",
+                "norg",
                 "python",
                 "query",
                 "r",
