@@ -25,6 +25,10 @@ vim.cmd("set noswapfile") -- no swap file
 
 vim.o.timeoutlen = 100 -- enable quicker response of which-key
 
+vim.cmd[[colorscheme tokyonight]]
+-- vim.cmd("colorscheme tokyonight")    -- alternatively
+
+
 -- temp ========================================================================
 
 -- stop auto format on save ----------------------------------------------------
