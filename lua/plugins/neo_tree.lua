@@ -12,6 +12,11 @@ return {
 
     keys = {
         {
+            "<leader>e",
+            "<cmd>Neotree filesystem reveal left<cr>",
+            desc = "open neotree on left",
+        },
+        {
             "<leader>tj",
             "<cmd>Neotree filesystem reveal left<cr>",
             desc = "open neotree on left",
@@ -26,11 +31,6 @@ return {
             "<cmd>Neotree filesystem reveal right<cr>",
             desc = "open neotree on right",
         },
-        -- {
-        --     "<leader>tb",
-        --     "<cmd>Neotree buffers reveal float<cr>",
-        --     desc = "open buffers",
-        -- },
         {
             "<leader>tb",
             function()
