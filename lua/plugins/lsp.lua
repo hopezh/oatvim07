@@ -47,7 +47,8 @@ return {
                 -- for the link btw "lspconfig server name" and "mason.nvim package name"
 
                 ensure_installed = {
-                    "cssls",
+                    --lspconfig server name     -- manson.nvim package name
+                    "cssls",                    -- css-lsp
                     "eslint",
                     "html",
                     "jsonls",
