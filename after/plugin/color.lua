@@ -2,7 +2,7 @@
 -- vim.cmd("colorscheme catppuccin")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme neofusion")
-vim.cmd("colorscheme tokyonight")
+-- vim.cmd("colorscheme tokyonight")
 
 
 -- toggle dark/light theme -----------------------------------------------------
